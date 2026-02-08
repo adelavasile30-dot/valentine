@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pentru Debora ❤️</title>
+
+<style>
+
+body{
+margin:0;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+font-family:Arial;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+/* INIMI */
+.heart{
+position:fixed;
+bottom:-10px;
+font-size:20px;
+animation:rise linear forwards;
+}
+
+@keyframes rise{
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+
+.container{
+margin-top:50px;
+padding:20px;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+position:relative;
+z-index:2;
+}
+
+button{
+padding:16px 30px;
+font-size:20px;
+border:none;
+border-radius:14px;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.gallery{
+display:none;
+margin-top:30px;
+}
+
+img{
+width:90%;
+max-width:360px;
+border-radius:20px;
+margin:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.letter{
+background:rgba(255,255,255,0.15);
+padding:25px;
+border-radius:18px;
+margin-bottom:30px;
+line-height:1.7;
+font-size:18px;
+}
+
+#no{
+position:relative;
+}
+
+h1{
+font-size:38px;
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="https://files.catbox.moe/147g0t.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>💙 Debora 🚗</h1>
+
+<div class="letter">
+Debora,<br><br>
+
+Din momentul în care ai apărut în viața mea, totul a devenit mai frumos.<br>
+Din <b>2023</b>, de când ne-am cunoscut, mi-ai schimbat lumea fără să-ți dai seama.<br>
+Iar pe <b>14 ianuarie 2025</b> nu am început doar o relație…  
+am început cel mai frumos capitol din viața mea.<br><br>
+
+Nu ești doar iubita mea — ești locul unde mă simt acasă.<br><br>
+
+❤️ Vrei să fii Valentine-ul meu? ❤️
+</div>
+
+<button onclick="start()">Apasă aici ❤️</button>
+
+<div class="gallery" id="gallery">
+
+<br>
+
+<button onclick="yes()">DA ❤️</button>
+<button id="no" onmouseover="run()">NU</button>
+
+<br><br>
+
+<img src="https://i.ibb.co/nyrdMSK/IMG-7809.jpg">
+<img src="https://i.ibb.co/rf6f2W75/IMG-7808.jpg">
+
+<h2>Te iubesc ❤️</h2>
+
+</div>
+
+</div>
+
+<script>
+
+function start(){
+document.getElementById("music").play();
+document.getElementById("gallery").style.display="block";
+}
+
+/* BUTONUL NU FUUGE */
+function run(){
+const btn=document.getElementById("no");
+btn.style.position="absolute";
+btn.style.left=Math.random()*60+"%";
+btn.style.top=Math.random()*60+"%";
+}
+
+function yes(){
+alert("Știam eu ❤️");
+}
+
+/* INIMI */
+function createHeart(){
+
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
